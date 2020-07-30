@@ -7,15 +7,15 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol EarthquakesRepository {
     func getEathquakes(
         north: Double,
         east: Double,
         west: Double,
-        south: Double,
-        completion: @escaping (_ result: Result<EarthquakesInfo, Error>) -> Void
-    )
+        south: Double
+    ) -> Observable<Result<EarthquakesInfo, Error>>
 }
 class EarthquakesRepositoryImpl: EarthquakesRepository {
     
@@ -29,18 +29,15 @@ class EarthquakesRepositoryImpl: EarthquakesRepository {
         north: Double,
         east: Double,
         west: Double,
-        south: Double,
-        completion: @escaping (_ result: Result<EarthquakesInfo, Error>) -> Void
-    ) {
-        dataSources.forEach { source in
-            source.fetchEarthquakes(
+        south: Double
+    ) -> Observable<Result<EarthquakesInfo, Error>> {
+        Observable.concat(dataSources.compactMap {
+            $0.fetchEarthquakes(
                 north: north,
                 east: east,
                 west: west,
                 south: south
-            ) { result in
-                completion(result)
-            }
-        }
+            ).asObservable()
+        })
     }
 }

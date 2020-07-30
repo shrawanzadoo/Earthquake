@@ -9,10 +9,10 @@
 import Foundation
 
 struct EarthquakesRemote: Codable {
-    let earthquakes: [Earthquake]
+    let earthquakes: [EarthquakeRemote]
 }
 
-struct Earthquake: Codable {
+struct EarthquakeRemote: Codable {
     let datetime: String
     let depth, lng: Double
     let src: String

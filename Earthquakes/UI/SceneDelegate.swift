@@ -12,8 +12,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UISplitViewControllerDe
 
     var window: UIWindow?
 
-
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+    func scene(
+        _ scene: UIScene,
+        willConnectTo session: UISceneSession,
+        options connectionOptions: UIScene.ConnectionOptions
+    ) {
         guard let window = window else { return }
         guard let splitViewController = window.rootViewController as? UISplitViewController else { return }
         guard let navigationController = splitViewController.viewControllers.last as? UINavigationController else { return }
@@ -26,8 +29,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UISplitViewControllerDe
 
     func splitViewController(
         _ splitViewController: UISplitViewController,
-        collapseSecondary secondaryViewController:UIViewController,
-        onto primaryViewController:UIViewController) -> Bool {
+        collapseSecondary secondaryViewController: UIViewController,
+        onto primaryViewController: UIViewController
+    ) -> Bool {
         guard let secondaryAsNavController = secondaryViewController as? UINavigationController else { return false }
         guard let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController else { return false }
         if topAsDetailController.detailItem == nil {

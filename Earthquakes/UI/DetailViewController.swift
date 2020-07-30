@@ -15,7 +15,7 @@ class DetailViewController: UIViewController {
     func configureView() {
         if let detail = detailItem {
             if let label = detailDescriptionLabel {
-                label.text = detail.description
+                label.text = "\(detail.magnitude)"
             }
         }
     }
@@ -25,7 +25,7 @@ class DetailViewController: UIViewController {
         configureView()
     }
 
-    var detailItem: NSDate? {
+    var detailItem: Earthquake? {
         didSet {
             configureView()
         }

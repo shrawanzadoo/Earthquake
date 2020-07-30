@@ -7,16 +7,15 @@
 //
 
 import Foundation
-
+import RxSwift
 
 protocol EarthquakesDataSource {
     func fetchEarthquakes(
         north: Double,
         east: Double,
         west: Double,
-        south: Double,
-        completion: @escaping (_ result: Result<EarthquakesInfo, Error>) -> Void
-    )
+        south: Double
+    ) -> Single<Result<EarthquakesInfo, Error>>
 }
 
 class EarthquakesDataSourceRemote: EarthquakesDataSource {
@@ -31,14 +30,13 @@ class EarthquakesDataSourceRemote: EarthquakesDataSource {
         north: Double,
         east: Double,
         west: Double,
-        south: Double,
-        completion: @escaping (_ result: Result<EarthquakesInfo, Error>) -> Void
-    ) {
+        south: Double
+    ) -> Single<Result<EarthquakesInfo, Error>> {
         self.earthquakesDataManager.fetchEarthquakes(
             north: north,
             east: east,
             west: west,
-            south: south) { result in
+            south: south).map { result in
                 switch(result) {
                 case .success(let earthquakeRemote):
                     var earthquakes: EarthquakesInfo = []
@@ -53,9 +51,9 @@ class EarthquakesDataSourceRemote: EarthquakesDataSource {
                             )
                         )
                     }
-                    completion(.success(earthquakes))
+                    return .success(earthquakes)
                 case .failure(let error):
-                    completion(.failure(error))
+                    return .failure(error)
                 }
         }
     }
