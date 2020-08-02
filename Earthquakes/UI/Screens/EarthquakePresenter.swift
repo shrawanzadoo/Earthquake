@@ -19,12 +19,6 @@ class EarthquakesPresenter: EarthquakesPresenterContract {
         south: -9.9
     )
     
-    let lastWeekDate = Calendar.current.date(
-        byAdding: .weekOfYear,
-        value: -1,
-        to: Date()
-    )
-    
     init(
         scheduler: SchedulerProvider,
         getEarthquakesUseCase: GetEarthquakes
