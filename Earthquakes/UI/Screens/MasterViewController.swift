@@ -13,7 +13,7 @@ protocol MasterViewControllerDelegate {
     func earthquakeLoaded(_ earthquake: Earthquake)
 }
 
-class MasterViewController: UITableViewController {
+class EarthquakeViewController: UITableViewController {
     
     let cellIdentifier = "MasterCells"
     var detailViewController: DetailViewController? = nil
@@ -52,56 +52,7 @@ class MasterViewController: UITableViewController {
         presenter.reloadEarthquakesAt()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
-        super.viewWillAppear(animated)
-    }
     
-    func showAlertWithAction(
-        title: String?,
-        message: String?,
-        mainActionTitle: String?,
-        mainActionCallback: (() -> Void)?
-    ) {
-        let alert = UIAlertController(
-            title: title,
-            message: message,
-            preferredStyle: UIAlertController.Style.alert
-        )
-        
-        if let mainActionTitle = mainActionTitle,
-            let mainActionCallback = mainActionCallback {
-            let save = UIAlertAction(
-                title: mainActionTitle,
-                style: .default
-            ) { (alertAction) in
-                mainActionCallback()
-            }
-            alert.addAction(save)
-        }
-        
-        let cancel = UIAlertAction(
-            title: "Cancel",
-            style: .default
-        ) { (alertAction) in }
-        alert.addAction(cancel)
-        
-        self.present(alert, animated:true, completion: nil)
-    }
-    
-//    // MARK: - Segues
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showDetail" {
-//            if let indexPath = tableView.indexPathForSelectedRow {
-//                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-//                controller.detailItem = earthquakes[indexPath.row]
-//                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-//                controller.navigationItem.leftItemsSupplementBackButton = true
-//                detailViewController = controller
-//            }
-//        }
-//    }
     
     // MARK: - Table View
     

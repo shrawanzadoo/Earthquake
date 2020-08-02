@@ -9,20 +9,20 @@
 import Foundation
 
 protocol EarthquakeAssembler {
-    func resolve() -> MasterViewController
-    func resolve() -> DetailViewController
+    func resolve() -> EarthquakeViewController
+    func resolve() -> EarthquakeDetailViewController
     func resolve() -> EarthquakesPresenterContract
     func resolve() -> SchedulerProvider
     func resolve() -> GetEarthquakes
 }
 
 extension EarthquakeAssembler {
-    func resolve() -> MasterViewController {
-        MasterViewController(presenter: resolve())
+    func resolve() -> EarthquakeViewController {
+        EarthquakeViewController(presenter: resolve())
     }
     
-    func resolve() -> DetailViewController {
-        DetailViewController()
+    func resolve() -> EarthquakeDetailViewController {
+        EarthquakeDetailViewController()
     }
     
     func resolve() -> EarthquakesPresenterContract {

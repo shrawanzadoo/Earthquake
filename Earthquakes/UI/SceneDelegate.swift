@@ -8,12 +8,12 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate, UISplitViewControllerDelegate, MasterViewControllerDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, UISplitViewControllerDelegate, EarthquakeViewControllerDelegate {
     
     var window: UIWindow?
     
-    var masterVC: MasterViewController?
-    var detailVC: DetailViewController?
+    var masterVC: EarthquakeViewController?
+    var detailVC: EarthquakeDetailViewController?
     var splitViewController: UISplitViewController?
     
     func scene(

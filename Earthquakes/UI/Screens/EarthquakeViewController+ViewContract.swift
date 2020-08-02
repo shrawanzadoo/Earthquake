@@ -1,5 +1,5 @@
 //
-//  MasterViewController+ViewContract.swift
+//  EarthquakeViewController+ViewContract.swift
 //  Earthquakes
 //
 //  Created by Shrawan Zadoo on 30/07/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension MasterViewController: EarthquakesViewContract {
+extension EarthquakeViewController: EarthquakesViewContract {
     func showLoading() {
         refreshControl?.beginRefreshing()
     }

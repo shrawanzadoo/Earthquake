@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  EarthquakeDetailViewController.swift
 //  Earthquakes
 //
 //  Created by Shrawan Zadoo on 26/07/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class EarthquakeDetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
