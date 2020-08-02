@@ -45,15 +45,16 @@ class EarthquakesPresenter: EarthquakesPresenterContract {
     //MARK: Presenter contracts
     func takeView(_ view: EarthquakesViewContract) {
         self.view = view
-        reloadEarthquakesAt()
+        reloadEarthquakes()
     }
     
-    func reloadEarthquakesAt() {
+    func reloadEarthquakes() {
         view?.showLoading()
         getEarthquakesUseCase.execute(defaultLocation)
             .subscribeOn(scheduler.io())
             .map { (response: Result<EarthquakesInfo, Error>) -> Result<[Earthquake], Error> in
-                if let earthquakes = self.processResponse(response) {
+                switch response {
+                case .success(let earthquakes):
                     let uiEarthquakes = earthquakes.map {
                         Earthquake(
                             datetime: $0.datetime,
@@ -65,8 +66,9 @@ class EarthquakesPresenter: EarthquakesPresenterContract {
                         )
                     }
                     return .success(uiEarthquakes)
+                case .failure(let error):
+                    return .failure(error)
                 }
-                return .failure(BaseError.noData)
         }
         .observeOn(scheduler.ui())
         .subscribe(onNext: { response in
@@ -78,7 +80,9 @@ class EarthquakesPresenter: EarthquakesPresenterContract {
         }).disposed(by: disposeBag)
     }
     
-    private func processResponse<T: Any>(_ response: Result<T, Error>) -> T? {
+    private func processResponse<T: Any>(
+        _ response: Result<T, Error>
+    ) -> T? {
         switch response {
         case .success(let result):
             return result
@@ -89,9 +93,19 @@ class EarthquakesPresenter: EarthquakesPresenterContract {
     }
     
     private func handleError(_ error: Error?) {
+        var message = "Something went wrong"
+        
+        if let baseError = error as? BaseError {
+            if case .noData = baseError {
+                message = "Sorry, no data found. Please check your Internet connction."
+            } else if case .parsingError = baseError {
+                message = "Looks like data is malformed."
+            }
+        }
+        
         self.view?.showAlert(
             title: "Oops!",
-            message: "Something went wrong",
+            message: message,
             mainActionTitle: nil,
             mainActionCallback: nil
         )

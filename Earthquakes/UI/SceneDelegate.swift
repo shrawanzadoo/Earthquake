@@ -29,7 +29,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UISplitViewControllerDe
         guard let window = window else { return }
         splitViewController = UISplitViewController()
         
-        
         masterVC = EarthquakeInjection().resolve()
         detailVC = EarthquakeInjection().resolve()
         

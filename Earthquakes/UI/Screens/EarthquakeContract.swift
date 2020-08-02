@@ -10,7 +10,7 @@ import Foundation
 
 protocol EarthquakesPresenterContract {
     func takeView(_ view: EarthquakesViewContract)
-    func reloadEarthquakesAt()
+    func reloadEarthquakes()
 }
 
 protocol EarthquakesViewContract {

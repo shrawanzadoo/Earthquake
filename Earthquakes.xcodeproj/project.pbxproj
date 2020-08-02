@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		033BAB7A24D6C7B900F85EF3 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033BAB7924D6C7B900F85EF3 /* UIViewController+Alert.swift */; };
 		033BAB7C24D6C99800F85EF3 /* EarthquakeViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033BAB7B24D6C99800F85EF3 /* EarthquakeViewController+TableView.swift */; };
+		033BAB8224D6CD9800F85EF3 /* MockEarthquakesDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033BAB8124D6CD9800F85EF3 /* MockEarthquakesDataManager.swift */; };
+		033BAB8524D6CDF400F85EF3 /* MockDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033BAB8424D6CDF400F85EF3 /* MockDataHelper.swift */; };
+		033BAB8824D6D05A00F85EF3 /* MockEarthquakesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033BAB8724D6D05A00F85EF3 /* MockEarthquakesDataSource.swift */; };
+		033BAB8A24D6D65C00F85EF3 /* remoteResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 033BAB8924D6D65C00F85EF3 /* remoteResponse.json */; };
+		033BAB8E24D6D71300F85EF3 /* MockEarthquakesViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033BAB8D24D6D71300F85EF3 /* MockEarthquakesViewContract.swift */; };
+		033BAB9124D6D7E300F85EF3 /* MockEarthquakesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033BAB9024D6D7E300F85EF3 /* MockEarthquakesRepository.swift */; };
+		033BAB9324D6D90D00F85EF3 /* MockSchedulerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033BAB9224D6D90D00F85EF3 /* MockSchedulerProvider.swift */; };
+		033BAB9724D6DA5400F85EF3 /* EarthquakesDataSourceRemoteTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033BAB9624D6DA5400F85EF3 /* EarthquakesDataSourceRemoteTest.swift */; };
+		033BAB9A24D6DB5F00F85EF3 /* EarthquakesRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033BAB9924D6DB5F00F85EF3 /* EarthquakesRepositoryTest.swift */; };
+		033BAB9D24D6DFE700F85EF3 /* EarthquakesPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033BAB9C24D6DFE700F85EF3 /* EarthquakesPresenterTest.swift */; };
 		03A2F3FF24D3406C00C9F256 /* EarthquakeViewController+ViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2F3FE24D3406C00C9F256 /* EarthquakeViewController+ViewContract.swift */; };
 		03A2F40124D3588400C9F256 /* EarthquakeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A2F40024D3588400C9F256 /* EarthquakeViewController.xib */; };
 		03A2F40324D3598A00C9F256 /* EarthquakeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A2F40224D3598A00C9F256 /* EarthquakeDetailViewController.xib */; };
@@ -53,6 +63,16 @@
 /* Begin PBXFileReference section */
 		033BAB7924D6C7B900F85EF3 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		033BAB7B24D6C99800F85EF3 /* EarthquakeViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EarthquakeViewController+TableView.swift"; sourceTree = "<group>"; };
+		033BAB8124D6CD9800F85EF3 /* MockEarthquakesDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEarthquakesDataManager.swift; sourceTree = "<group>"; };
+		033BAB8424D6CDF400F85EF3 /* MockDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataHelper.swift; sourceTree = "<group>"; };
+		033BAB8724D6D05A00F85EF3 /* MockEarthquakesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEarthquakesDataSource.swift; sourceTree = "<group>"; };
+		033BAB8924D6D65C00F85EF3 /* remoteResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = remoteResponse.json; sourceTree = "<group>"; };
+		033BAB8D24D6D71300F85EF3 /* MockEarthquakesViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEarthquakesViewContract.swift; sourceTree = "<group>"; };
+		033BAB9024D6D7E300F85EF3 /* MockEarthquakesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEarthquakesRepository.swift; sourceTree = "<group>"; };
+		033BAB9224D6D90D00F85EF3 /* MockSchedulerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSchedulerProvider.swift; sourceTree = "<group>"; };
+		033BAB9624D6DA5400F85EF3 /* EarthquakesDataSourceRemoteTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakesDataSourceRemoteTest.swift; sourceTree = "<group>"; };
+		033BAB9924D6DB5F00F85EF3 /* EarthquakesRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakesRepositoryTest.swift; sourceTree = "<group>"; };
+		033BAB9C24D6DFE700F85EF3 /* EarthquakesPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakesPresenterTest.swift; sourceTree = "<group>"; };
 		036DAF1296A6C2350DFA0CE4 /* Pods-Earthquakes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Earthquakes.release.xcconfig"; path = "Target Support Files/Pods-Earthquakes/Pods-Earthquakes.release.xcconfig"; sourceTree = "<group>"; };
 		03A2F3FE24D3406C00C9F256 /* EarthquakeViewController+ViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EarthquakeViewController+ViewContract.swift"; sourceTree = "<group>"; };
 		03A2F40024D3588400C9F256 /* EarthquakeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EarthquakeViewController.xib; sourceTree = "<group>"; };
@@ -120,6 +140,119 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		033BAB7D24D6CB0F00F85EF3 /* Earthquake List */ = {
+			isa = PBXGroup;
+			children = (
+				03B05D5B24CD9DAA005973D0 /* EarthquakeViewController.swift */,
+				03A2F3FE24D3406C00C9F256 /* EarthquakeViewController+ViewContract.swift */,
+				033BAB7B24D6C99800F85EF3 /* EarthquakeViewController+TableView.swift */,
+				03A2F40024D3588400C9F256 /* EarthquakeViewController.xib */,
+			);
+			path = "Earthquake List";
+			sourceTree = "<group>";
+		};
+		033BAB7E24D6CB1F00F85EF3 /* Earthquake Detail */ = {
+			isa = PBXGroup;
+			children = (
+				03B05D5D24CD9DAA005973D0 /* EarthquakeDetailViewController.swift */,
+				03A2F40224D3598A00C9F256 /* EarthquakeDetailViewController.xib */,
+			);
+			path = "Earthquake Detail";
+			sourceTree = "<group>";
+		};
+		033BAB7F24D6CD5C00F85EF3 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				033BAB8B24D6D65F00F85EF3 /* Stored Response */,
+				033BAB8324D6CDE400F85EF3 /* Helper */,
+				033BAB8024D6CD6600F85EF3 /* Data Manager */,
+				033BAB8624D6D04100F85EF3 /* Data Source */,
+				033BAB8F24D6D7D800F85EF3 /* Repository */,
+				033BAB8C24D6D70C00F85EF3 /* View */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		033BAB8024D6CD6600F85EF3 /* Data Manager */ = {
+			isa = PBXGroup;
+			children = (
+				033BAB8124D6CD9800F85EF3 /* MockEarthquakesDataManager.swift */,
+			);
+			path = "Data Manager";
+			sourceTree = "<group>";
+		};
+		033BAB8324D6CDE400F85EF3 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				033BAB8424D6CDF400F85EF3 /* MockDataHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		033BAB8624D6D04100F85EF3 /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				033BAB8724D6D05A00F85EF3 /* MockEarthquakesDataSource.swift */,
+			);
+			path = "Data Source";
+			sourceTree = "<group>";
+		};
+		033BAB8B24D6D65F00F85EF3 /* Stored Response */ = {
+			isa = PBXGroup;
+			children = (
+				033BAB8924D6D65C00F85EF3 /* remoteResponse.json */,
+			);
+			path = "Stored Response";
+			sourceTree = "<group>";
+		};
+		033BAB8C24D6D70C00F85EF3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				033BAB8D24D6D71300F85EF3 /* MockEarthquakesViewContract.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		033BAB8F24D6D7D800F85EF3 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				033BAB9024D6D7E300F85EF3 /* MockEarthquakesRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		033BAB9424D6D90F00F85EF3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				033BAB9224D6D90D00F85EF3 /* MockSchedulerProvider.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		033BAB9524D6D9DE00F85EF3 /* Data Source Tests */ = {
+			isa = PBXGroup;
+			children = (
+				033BAB9624D6DA5400F85EF3 /* EarthquakesDataSourceRemoteTest.swift */,
+			);
+			path = "Data Source Tests";
+			sourceTree = "<group>";
+		};
+		033BAB9824D6DB4E00F85EF3 /* Repository Tests */ = {
+			isa = PBXGroup;
+			children = (
+				033BAB9924D6DB5F00F85EF3 /* EarthquakesRepositoryTest.swift */,
+			);
+			path = "Repository Tests";
+			sourceTree = "<group>";
+		};
+		033BAB9B24D6DFC300F85EF3 /* Presenter Tests */ = {
+			isa = PBXGroup;
+			children = (
+				033BAB9C24D6DFE700F85EF3 /* EarthquakesPresenterTest.swift */,
+			);
+			path = "Presenter Tests";
+			sourceTree = "<group>";
+		};
 		03A2F40424D4343700C9F256 /* Static Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,12 +266,8 @@
 			children = (
 				03B05DA724CF5B5E005973D0 /* EarthquakeContract.swift */,
 				03B05DA924CF5B6D005973D0 /* EarthquakePresenter.swift */,
-				03B05D5B24CD9DAA005973D0 /* EarthquakeViewController.swift */,
-				03A2F3FE24D3406C00C9F256 /* EarthquakeViewController+ViewContract.swift */,
-				033BAB7B24D6C99800F85EF3 /* EarthquakeViewController+TableView.swift */,
-				03A2F40024D3588400C9F256 /* EarthquakeViewController.xib */,
-				03B05D5D24CD9DAA005973D0 /* EarthquakeDetailViewController.swift */,
-				03A2F40224D3598A00C9F256 /* EarthquakeDetailViewController.xib */,
+				033BAB7D24D6CB0F00F85EF3 /* Earthquake List */,
+				033BAB7E24D6CB1F00F85EF3 /* Earthquake Detail */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -178,6 +307,11 @@
 		03B05D6F24CD9DAB005973D0 /* EarthquakesTests */ = {
 			isa = PBXGroup;
 			children = (
+				033BAB9424D6D90F00F85EF3 /* Services */,
+				033BAB7F24D6CD5C00F85EF3 /* Mocks */,
+				033BAB9524D6D9DE00F85EF3 /* Data Source Tests */,
+				033BAB9824D6DB4E00F85EF3 /* Repository Tests */,
+				033BAB9B24D6DFC300F85EF3 /* Presenter Tests */,
 				03B05D7224CD9DAB005973D0 /* Info.plist */,
 			);
 			path = EarthquakesTests;
@@ -413,6 +547,7 @@
 					};
 					03B05D6B24CD9DAB005973D0 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 						TestTargetID = 03B05D5324CD9DAA005973D0;
 					};
 				};
@@ -452,6 +587,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				033BAB8A24D6D65C00F85EF3 /* remoteResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +694,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				033BAB9A24D6DB5F00F85EF3 /* EarthquakesRepositoryTest.swift in Sources */,
+				033BAB9324D6D90D00F85EF3 /* MockSchedulerProvider.swift in Sources */,
+				033BAB8224D6CD9800F85EF3 /* MockEarthquakesDataManager.swift in Sources */,
+				033BAB8524D6CDF400F85EF3 /* MockDataHelper.swift in Sources */,
+				033BAB8824D6D05A00F85EF3 /* MockEarthquakesDataSource.swift in Sources */,
+				033BAB9124D6D7E300F85EF3 /* MockEarthquakesRepository.swift in Sources */,
+				033BAB8E24D6D71300F85EF3 /* MockEarthquakesViewContract.swift in Sources */,
+				033BAB9724D6DA5400F85EF3 /* EarthquakesDataSourceRemoteTest.swift in Sources */,
+				033BAB9D24D6DFE700F85EF3 /* EarthquakesPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,6 +884,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = EarthquakesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
@@ -749,6 +895,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shrawan.EarthquakesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Earthquakes.app/Earthquakes";
@@ -761,6 +908,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = EarthquakesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;

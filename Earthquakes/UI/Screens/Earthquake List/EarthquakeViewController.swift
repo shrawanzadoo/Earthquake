@@ -1,5 +1,5 @@
 //
-//  MasterViewController.swift
+//  EarthquakeViewController.swift
 //  Earthquakes
 //
 //  Created by Shrawan Zadoo on 26/07/2020.
@@ -15,8 +15,7 @@ protocol EarthquakeViewControllerDelegate {
 
 class EarthquakeViewController: UITableViewController {
     
-    let cellIdentifier = "MasterCells"
-    var detailViewController: EarthquakeDetailViewController? = nil
+    let cellIdentifier = "EarthquakeCells"
     var earthquakes = [Earthquake]()
     
     var delegate: EarthquakeViewControllerDelegate?
@@ -36,10 +35,6 @@ class EarthquakeViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let split = splitViewController {
-            let controllers = split.viewControllers
-            detailViewController = (controllers[controllers.count - 1] as? UINavigationController)?.topViewController as? EarthquakeDetailViewController
-        }
         
         refreshControl = UIRefreshControl()
         if let refreshControl = refreshControl {
@@ -49,7 +44,7 @@ class EarthquakeViewController: UITableViewController {
     }
     
     @objc private func refreshData(_ sender: Any) {
-        presenter.reloadEarthquakesAt()
+        presenter.reloadEarthquakes()
     }
 }
 

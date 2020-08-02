@@ -14,8 +14,8 @@ struct EarthquakesRemote: Codable {
 
 struct EarthquakeRemote: Codable {
     let datetime: String
-    let depth, lng: Double
+    let lat, lng: Double
     let src: String
     let eqid: String
-    let magnitude, lat: Double
+    let magnitude, depth: Double
 }
