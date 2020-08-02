@@ -22,22 +22,22 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aD-4S-LvO">
-                    <rect key="frame" x="20" y="764" width="80.5" height="21"/>
+                    <rect key="frame" x="20" y="788" width="80.5" height="21"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tv4-WX-BaT">
-                    <rect key="frame" x="20" y="801" width="42" height="21"/>
+                    <rect key="frame" x="20" y="825" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="em0-tI-79F">
-                    <rect key="frame" x="0.0" y="44" width="414" height="680"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="728"/>
                 </mapView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpq-Ls-Vpb">
-                    <rect key="frame" x="70" y="801" width="42" height="21"/>
+                    <rect key="frame" x="70" y="825" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -49,11 +49,11 @@
                 <constraint firstItem="Tv4-WX-BaT" firstAttribute="top" secondItem="0aD-4S-LvO" secondAttribute="bottom" constant="16" id="6gM-BT-s7G"/>
                 <constraint firstItem="em0-tI-79F" firstAttribute="top" secondItem="Txz-tl-hBd" secondAttribute="top" id="HNB-0O-q7j"/>
                 <constraint firstItem="Jpq-Ls-Vpb" firstAttribute="centerY" secondItem="Tv4-WX-BaT" secondAttribute="centerY" id="PEv-JC-Tr7"/>
-                <constraint firstItem="0aD-4S-LvO" firstAttribute="top" secondItem="em0-tI-79F" secondAttribute="bottom" constant="40" id="QgG-j6-tnA"/>
+                <constraint firstItem="0aD-4S-LvO" firstAttribute="top" secondItem="em0-tI-79F" secondAttribute="bottom" constant="16" id="QgG-j6-tnA"/>
                 <constraint firstItem="0aD-4S-LvO" firstAttribute="leading" secondItem="Txz-tl-hBd" secondAttribute="leading" constant="20" id="S3g-Xs-e7v"/>
                 <constraint firstItem="Jpq-Ls-Vpb" firstAttribute="leading" secondItem="Tv4-WX-BaT" secondAttribute="trailing" constant="8" id="U4X-j8-GmX"/>
                 <constraint firstItem="Tv4-WX-BaT" firstAttribute="leading" secondItem="Txz-tl-hBd" secondAttribute="leading" constant="20" id="mWQ-Gg-Dq6"/>
-                <constraint firstItem="Txz-tl-hBd" firstAttribute="bottom" secondItem="Tv4-WX-BaT" secondAttribute="bottom" constant="40" id="vK5-vl-dbg"/>
+                <constraint firstItem="Txz-tl-hBd" firstAttribute="bottom" secondItem="Tv4-WX-BaT" secondAttribute="bottom" constant="16" id="vK5-vl-dbg"/>
                 <constraint firstItem="Txz-tl-hBd" firstAttribute="trailing" secondItem="em0-tI-79F" secondAttribute="trailing" id="vfW-Wa-5DZ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Txz-tl-hBd"/>

@@ -23,8 +23,8 @@ extension EarthquakeViewController {
         if cell == nil {
             cell = getDefaultTableCell()
         }
-        cell.textLabel?.text = "\(earthquakes[indexPath.row].magnitude)"
-        cell.detailTextLabel?.text = "\(earthquakes[indexPath.row].intensity)"
+        cell.textLabel?.text = "Magnitude : \(earthquakes[indexPath.row].magnitude)"
+        cell.detailTextLabel?.text = "Intensity : \(earthquakes[indexPath.row].intensity)"
         cell.backgroundColor = earthquakes[indexPath.row].intensity == .high ? .systemRed : .systemOrange
         return cell
     }
