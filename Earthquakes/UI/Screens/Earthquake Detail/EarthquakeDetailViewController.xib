@@ -9,7 +9,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EarthquakeDetailViewController" customModule="Earthquakes" customModuleProvider="target">
             <connections>
-                <outlet property="detailDescriptionLabel" destination="0aD-4S-LvO" id="cH9-Lk-0FN"/>
+                <outlet property="dateLabel" destination="Jpq-Ls-Vpb" id="DyM-fJ-zcu"/>
+                <outlet property="depthLabel" destination="Tv4-WX-BaT" id="yhf-i1-4qu"/>
+                <outlet property="magnitudeLabel" destination="0aD-4S-LvO" id="XBj-tl-Diz"/>
+                <outlet property="mapView" destination="em0-tI-79F" id="zZ4-9E-gIm"/>
                 <outlet property="view" destination="nvr-nS-ZQp" id="sUk-gc-VAS"/>
             </connections>
         </placeholder>
@@ -19,19 +22,42 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aD-4S-LvO">
-                    <rect key="frame" x="172" y="437.5" width="70.5" height="21"/>
+                    <rect key="frame" x="20" y="764" width="80.5" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tv4-WX-BaT">
+                    <rect key="frame" x="20" y="801" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="em0-tI-79F">
+                    <rect key="frame" x="0.0" y="44" width="414" height="680"/>
+                </mapView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpq-Ls-Vpb">
+                    <rect key="frame" x="70" y="801" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="0aD-4S-LvO" firstAttribute="centerY" secondItem="nvr-nS-ZQp" secondAttribute="centerY" id="NVB-Lo-Sxb"/>
-                <constraint firstItem="0aD-4S-LvO" firstAttribute="centerX" secondItem="nvr-nS-ZQp" secondAttribute="centerX" id="XrI-Hm-wMy"/>
+                <constraint firstItem="em0-tI-79F" firstAttribute="leading" secondItem="Txz-tl-hBd" secondAttribute="leading" id="4Bj-27-db8"/>
+                <constraint firstItem="Tv4-WX-BaT" firstAttribute="top" secondItem="0aD-4S-LvO" secondAttribute="bottom" constant="16" id="6gM-BT-s7G"/>
+                <constraint firstItem="em0-tI-79F" firstAttribute="top" secondItem="Txz-tl-hBd" secondAttribute="top" id="HNB-0O-q7j"/>
+                <constraint firstItem="Jpq-Ls-Vpb" firstAttribute="centerY" secondItem="Tv4-WX-BaT" secondAttribute="centerY" id="PEv-JC-Tr7"/>
+                <constraint firstItem="0aD-4S-LvO" firstAttribute="top" secondItem="em0-tI-79F" secondAttribute="bottom" constant="40" id="QgG-j6-tnA"/>
+                <constraint firstItem="0aD-4S-LvO" firstAttribute="leading" secondItem="Txz-tl-hBd" secondAttribute="leading" constant="20" id="S3g-Xs-e7v"/>
+                <constraint firstItem="Jpq-Ls-Vpb" firstAttribute="leading" secondItem="Tv4-WX-BaT" secondAttribute="trailing" constant="8" id="U4X-j8-GmX"/>
+                <constraint firstItem="Tv4-WX-BaT" firstAttribute="leading" secondItem="Txz-tl-hBd" secondAttribute="leading" constant="20" id="mWQ-Gg-Dq6"/>
+                <constraint firstItem="Txz-tl-hBd" firstAttribute="bottom" secondItem="Tv4-WX-BaT" secondAttribute="bottom" constant="40" id="vK5-vl-dbg"/>
+                <constraint firstItem="Txz-tl-hBd" firstAttribute="trailing" secondItem="em0-tI-79F" secondAttribute="trailing" id="vfW-Wa-5DZ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Txz-tl-hBd"/>
-            <point key="canvasLocation" x="80" y="-346"/>
+            <point key="canvasLocation" x="79.710144927536234" y="-346.20535714285711"/>
         </view>
     </objects>
 </document>

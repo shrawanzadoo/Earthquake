@@ -19,6 +19,7 @@
 		033BAB9724D6DA5400F85EF3 /* EarthquakesDataSourceRemoteTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033BAB9624D6DA5400F85EF3 /* EarthquakesDataSourceRemoteTest.swift */; };
 		033BAB9A24D6DB5F00F85EF3 /* EarthquakesRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033BAB9924D6DB5F00F85EF3 /* EarthquakesRepositoryTest.swift */; };
 		033BAB9D24D6DFE700F85EF3 /* EarthquakesPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033BAB9C24D6DFE700F85EF3 /* EarthquakesPresenterTest.swift */; };
+		033BAB9F24D7047700F85EF3 /* MKMapView+CenterLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033BAB9E24D7047700F85EF3 /* MKMapView+CenterLocation.swift */; };
 		03A2F3FF24D3406C00C9F256 /* EarthquakeViewController+ViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2F3FE24D3406C00C9F256 /* EarthquakeViewController+ViewContract.swift */; };
 		03A2F40124D3588400C9F256 /* EarthquakeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A2F40024D3588400C9F256 /* EarthquakeViewController.xib */; };
 		03A2F40324D3598A00C9F256 /* EarthquakeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A2F40224D3598A00C9F256 /* EarthquakeDetailViewController.xib */; };
@@ -73,6 +74,7 @@
 		033BAB9624D6DA5400F85EF3 /* EarthquakesDataSourceRemoteTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakesDataSourceRemoteTest.swift; sourceTree = "<group>"; };
 		033BAB9924D6DB5F00F85EF3 /* EarthquakesRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakesRepositoryTest.swift; sourceTree = "<group>"; };
 		033BAB9C24D6DFE700F85EF3 /* EarthquakesPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakesPresenterTest.swift; sourceTree = "<group>"; };
+		033BAB9E24D7047700F85EF3 /* MKMapView+CenterLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+CenterLocation.swift"; sourceTree = "<group>"; };
 		036DAF1296A6C2350DFA0CE4 /* Pods-Earthquakes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Earthquakes.release.xcconfig"; path = "Target Support Files/Pods-Earthquakes/Pods-Earthquakes.release.xcconfig"; sourceTree = "<group>"; };
 		03A2F3FE24D3406C00C9F256 /* EarthquakeViewController+ViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EarthquakeViewController+ViewContract.swift"; sourceTree = "<group>"; };
 		03A2F40024D3588400C9F256 /* EarthquakeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EarthquakeViewController.xib; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				033BAB7924D6C7B900F85EF3 /* UIViewController+Alert.swift */,
+				033BAB9E24D7047700F85EF3 /* MKMapView+CenterLocation.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -681,6 +684,7 @@
 				033BAB7A24D6C7B900F85EF3 /* UIViewController+Alert.swift in Sources */,
 				03B05D8C24CDCC83005973D0 /* ConcurrentOperation.swift in Sources */,
 				03B05D9E24CDEB72005973D0 /* EarthquakesDataSource.swift in Sources */,
+				033BAB9F24D7047700F85EF3 /* MKMapView+CenterLocation.swift in Sources */,
 				03B05D9A24CDE165005973D0 /* EarthquakesRemote.swift in Sources */,
 				03B05D9424CDCE6A005973D0 /* RequestConfig.swift in Sources */,
 				03B05D5E24CD9DAA005973D0 /* EarthquakeDetailViewController.swift in Sources */,

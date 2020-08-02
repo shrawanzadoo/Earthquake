@@ -7,16 +7,27 @@
 //
 
 import UIKit
+import MapKit
 
 class EarthquakeDetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet private var mapView: MKMapView!
+    @IBOutlet weak var magnitudeLabel: UILabel!
+    @IBOutlet weak var depthLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
 
     func configureView() {
         if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                navigationItem.title = "Earthquake \(detail.depth)"
-                label.text = "\(detail.magnitude)"
+            if let magnitudeLabel = magnitudeLabel {
+                magnitudeLabel.text = "Magnitude : \(detail.magnitude)"
+                depthLabel.text = "Depth : \(detail.depth)"
+                if let date = detail.datetime {
+                    let formatter = DateFormatter()
+                    formatter.dateFormat = "HH:mm E, d MMM y"
+                    dateLabel.text = "Depth : \(formatter.string(from: date))"
+                }
+                mapView.centerToLocation(detail.lat, detail.lng)
+                view.backgroundColor = detail.intensity == .high ? .systemRed : .systemOrange
             }
         }
     }
