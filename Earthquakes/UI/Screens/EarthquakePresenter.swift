@@ -1,11 +1,3 @@
-//
-//  EarthquakePresenter.swift
-//  Earthquakes
-//
-//  Created by Shrawan Zadoo on 27/07/2020.
-//  Copyright © 2020 Shrawan Zadoo. All rights reserved.
-//
-
 import Foundation
 import RxSwift
 

@@ -1,11 +1,3 @@
-//
-//  EarthquakeViewController+TableView.swift
-//  Earthquakes
-//
-//  Created by Shrawan Zadoo on 02/08/2020.
-//  Copyright © 2020 Shrawan Zadoo. All rights reserved.
-//
-
 import UIKit
 
 extension EarthquakeViewController {
@@ -25,7 +17,7 @@ extension EarthquakeViewController {
         }
         cell.textLabel?.text = "Magnitude : \(earthquakes[indexPath.row].magnitude)"
         cell.detailTextLabel?.text = "Intensity : \(earthquakes[indexPath.row].intensity)"
-        cell.backgroundColor = earthquakes[indexPath.row].intensity == .high ? .systemRed : .systemOrange
+        cell.backgroundColor = earthquakes[indexPath.row].intensity.getColor()
         return cell
     }
     

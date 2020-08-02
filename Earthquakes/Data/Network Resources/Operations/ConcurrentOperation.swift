@@ -1,11 +1,3 @@
-//
-//  ConcurrentOperation.swift
-//  Round Up
-//
-//  Created by Shrawan Zadoo on 02/05/2020.
-//  Copyright © 2020 Shrawan Zadoo. All rights reserved.
-//
-
 import Foundation
 
 class ConcurrentOperation<T>: Operation {

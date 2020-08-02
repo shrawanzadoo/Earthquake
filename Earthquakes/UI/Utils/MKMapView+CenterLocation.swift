@@ -1,11 +1,3 @@
-//
-//  MKMapView+CenterLocation.swift
-//  Earthquakes
-//
-//  Created by Shrawan Zadoo on 02/08/2020.
-//  Copyright © 2020 Shrawan Zadoo. All rights reserved.
-//
-
 import MapKit
 
 extension MKMapView {

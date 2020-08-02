@@ -1,11 +1,3 @@
-//
-//  EarthquakeDetailViewController.swift
-//  Earthquakes
-//
-//  Created by Shrawan Zadoo on 26/07/2020.
-//  Copyright © 2020 Shrawan Zadoo. All rights reserved.
-//
-
 import UIKit
 import MapKit
 
@@ -23,7 +15,7 @@ class EarthquakeDetailViewController: UIViewController {
                 depthLabel.text = "Depth : \(detail.depth)km"
                 dateLabel.text = "Date : \(detail.datetime)"
                 mapView.centerToLocation(detail.lat, detail.lng)
-                view.backgroundColor = detail.intensity == .high ? .systemRed : .systemOrange
+                view.backgroundColor = detail.intensity.getColor()
             }
         }
     }

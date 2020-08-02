@@ -1,12 +1,4 @@
-//
-//  Earthquake.swift
-//  Earthquakes
-//
-//  Created by Shrawan Zadoo on 27/07/2020.
-//  Copyright © 2020 Shrawan Zadoo. All rights reserved.
-//
-
-import Foundation
+import UIKit
 
 struct Earthquake {
     let datetime: String
@@ -18,4 +10,14 @@ struct Earthquake {
 enum Intensity {
     case low
     case high
+    
+    func getColor() -> UIColor {
+        switch self {
+        case .high:
+            return UIColor.systemRed
+        default:
+            return UIColor.systemOrange
+        }
+    }
 }
+
