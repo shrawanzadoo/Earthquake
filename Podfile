@@ -13,5 +13,11 @@ target 'Earthquakes' do
     inherit! :search_paths
     # Pods for testing
   end
+  
+  target "EarthquakesSnapshotTests" do
+    use_frameworks!
+    inherit! :search_paths
+    pod 'iOSSnapshotTestCase'
+  end
 
 end

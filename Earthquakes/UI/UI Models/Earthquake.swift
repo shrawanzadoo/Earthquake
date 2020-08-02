@@ -9,7 +9,7 @@
 import Foundation
 
 struct Earthquake {
-    let datetime: Date?
+    let datetime: String
     let lat, lng: Double
     let magnitude, depth: Double
     let intensity: Intensity

@@ -57,7 +57,7 @@ class EarthquakesPresenter: EarthquakesPresenterContract {
                 case .success(let earthquakes):
                     let uiEarthquakes = earthquakes.map {
                         Earthquake(
-                            datetime: $0.datetime,
+                            datetime: self.getFormattedDate($0.datetime),
                             lat: $0.lat,
                             lng: $0.lng,
                             magnitude: $0.magnitude,
@@ -109,5 +109,12 @@ class EarthquakesPresenter: EarthquakesPresenterContract {
             mainActionTitle: nil,
             mainActionCallback: nil
         )
+    }
+    
+    private func getFormattedDate(_ date: Date?) -> String {
+        guard let date = date else { return "" }
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm E, d MMM y"
+        return formatter.string(from: date)
     }
 }

@@ -21,11 +21,7 @@ class EarthquakeDetailViewController: UIViewController {
             if let magnitudeLabel = magnitudeLabel {
                 magnitudeLabel.text = "Magnitude : \(detail.magnitude)"
                 depthLabel.text = "Depth : \(detail.depth)km"
-                if let date = detail.datetime {
-                    let formatter = DateFormatter()
-                    formatter.dateFormat = "HH:mm E, d MMM y"
-                    dateLabel.text = "Date : \(formatter.string(from: date))"
-                }
+                dateLabel.text = "Date : \(detail.datetime)"
                 mapView.centerToLocation(detail.lat, detail.lng)
                 view.backgroundColor = detail.intensity == .high ? .systemRed : .systemOrange
             }

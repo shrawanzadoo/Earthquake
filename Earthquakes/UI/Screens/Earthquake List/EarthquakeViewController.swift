@@ -26,7 +26,6 @@ class EarthquakeViewController: UITableViewController {
         super.init(nibName: nil, bundle: nil)
         
         navigationItem.title = "Earthquakes"
-        self.presenter.takeView(self)
     }
     
     required init?(coder: NSCoder) {
@@ -41,6 +40,8 @@ class EarthquakeViewController: UITableViewController {
             tableView.addSubview(refreshControl)
             refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
         }
+        
+        self.presenter.takeView(self)
     }
     
     @objc private func refreshData(_ sender: Any) {
