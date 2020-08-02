@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="Earthquakes" customModuleProvider="target">
+            <connections>
+                <outlet property="detailDescriptionLabel" destination="0aD-4S-LvO" id="cH9-Lk-0FN"/>
+                <outlet property="view" destination="nvr-nS-ZQp" id="sUk-gc-VAS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="nvr-nS-ZQp">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aD-4S-LvO">
+                    <rect key="frame" x="172" y="437.5" width="70.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="0aD-4S-LvO" firstAttribute="centerY" secondItem="nvr-nS-ZQp" secondAttribute="centerY" id="NVB-Lo-Sxb"/>
+                <constraint firstItem="0aD-4S-LvO" firstAttribute="centerX" secondItem="nvr-nS-ZQp" secondAttribute="centerX" id="XrI-Hm-wMy"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Txz-tl-hBd"/>
+            <point key="canvasLocation" x="80" y="-346"/>
+        </view>
+    </objects>
+</document>

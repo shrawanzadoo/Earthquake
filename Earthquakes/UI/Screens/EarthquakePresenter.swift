@@ -22,9 +22,9 @@ class EarthquakesPresenter: EarthquakesPresenterContract {
     
     let defaultLocation = GetEarthquakes.Q(
         north: 44.1,
-        east: -9.9,
-        west: -22.4,
-        south: 55.2
+        east: -22.4,
+        west: 55.2,
+        south: -9.9
     )
     
     let lastWeekDate = Calendar.current.date(
@@ -45,11 +45,12 @@ class EarthquakesPresenter: EarthquakesPresenterContract {
     //MARK: Presenter contracts
     func takeView(_ view: EarthquakesViewContract) {
         self.view = view
-        reloadEarthquakesAt(location: defaultLocation)
+        reloadEarthquakesAt()
     }
     
-    func reloadEarthquakesAt(location: EarthquakeLocation) {
-        getEarthquakesUseCase.execute(location)
+    func reloadEarthquakesAt() {
+        view?.showLoading()
+        getEarthquakesUseCase.execute(defaultLocation)
             .subscribeOn(scheduler.io())
             .map { (response: Result<EarthquakesInfo, Error>) -> Result<[Earthquake], Error> in
                 if let earthquakes = self.processResponse(response) {
@@ -69,6 +70,7 @@ class EarthquakesPresenter: EarthquakesPresenterContract {
         }
         .observeOn(scheduler.ui())
         .subscribe(onNext: { response in
+            self.view?.hideLoading()
             if let uiEarthquakes = self.processResponse(response) {
                 self.earthquakes = uiEarthquakes
                 self.view?.updateEarthquakes(earthquakes: uiEarthquakes)

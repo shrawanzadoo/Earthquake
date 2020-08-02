@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		03A2F3FF24D3406C00C9F256 /* MasterViewController+ViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2F3FE24D3406C00C9F256 /* MasterViewController+ViewContract.swift */; };
+		03A2F40124D3588400C9F256 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A2F40024D3588400C9F256 /* MasterViewController.xib */; };
+		03A2F40324D3598A00C9F256 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A2F40224D3598A00C9F256 /* DetailViewController.xib */; };
 		03B05D5824CD9DAA005973D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B05D5724CD9DAA005973D0 /* AppDelegate.swift */; };
 		03B05D5A24CD9DAA005973D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B05D5924CD9DAA005973D0 /* SceneDelegate.swift */; };
 		03B05D5C24CD9DAA005973D0 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B05D5B24CD9DAA005973D0 /* MasterViewController.swift */; };
 		03B05D5E24CD9DAA005973D0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B05D5D24CD9DAA005973D0 /* DetailViewController.swift */; };
-		03B05D6124CD9DAA005973D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B05D5F24CD9DAA005973D0 /* Main.storyboard */; };
 		03B05D6324CD9DAB005973D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03B05D6224CD9DAB005973D0 /* Assets.xcassets */; };
 		03B05D6624CD9DAB005973D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B05D6424CD9DAB005973D0 /* LaunchScreen.storyboard */; };
 		03B05D8924CDCB91005973D0 /* QueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B05D8724CDCB91005973D0 /* QueueManager.swift */; };
@@ -50,12 +51,13 @@
 /* Begin PBXFileReference section */
 		036DAF1296A6C2350DFA0CE4 /* Pods-Earthquakes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Earthquakes.release.xcconfig"; path = "Target Support Files/Pods-Earthquakes/Pods-Earthquakes.release.xcconfig"; sourceTree = "<group>"; };
 		03A2F3FE24D3406C00C9F256 /* MasterViewController+ViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasterViewController+ViewContract.swift"; sourceTree = "<group>"; };
+		03A2F40024D3588400C9F256 /* MasterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MasterViewController.xib; sourceTree = "<group>"; };
+		03A2F40224D3598A00C9F256 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		03B05D5424CD9DAA005973D0 /* Earthquakes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earthquakes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B05D5724CD9DAA005973D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03B05D5924CD9DAA005973D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		03B05D5B24CD9DAA005973D0 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		03B05D5D24CD9DAA005973D0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		03B05D6024CD9DAA005973D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03B05D6224CD9DAB005973D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03B05D6524CD9DAB005973D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03B05D6724CD9DAB005973D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,6 +108,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03A2F40424D4343700C9F256 /* Static Assets */ = {
+			isa = PBXGroup;
+			children = (
+				03B05D6224CD9DAB005973D0 /* Assets.xcassets */,
+			);
+			path = "Static Assets";
+			sourceTree = "<group>";
+		};
+		03A2F40524D4344500C9F256 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				03B05DA724CF5B5E005973D0 /* EarthquakeContract.swift */,
+				03B05DA924CF5B6D005973D0 /* EarthquakePresenter.swift */,
+				03B05D5B24CD9DAA005973D0 /* MasterViewController.swift */,
+				03A2F3FE24D3406C00C9F256 /* MasterViewController+ViewContract.swift */,
+				03A2F40024D3588400C9F256 /* MasterViewController.xib */,
+				03B05D5D24CD9DAA005973D0 /* DetailViewController.swift */,
+				03A2F40224D3598A00C9F256 /* DetailViewController.xib */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		03B05D4B24CD9DAA005973D0 = {
 			isa = PBXGroup;
 			children = (
@@ -169,16 +193,11 @@
 		03B05D7D24CDAF18005973D0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				03B05DAE24CF5B7F005973D0 /* UI Models */,
+				03A2F40424D4343700C9F256 /* Static Assets */,
 				03B05DAB24CF5B70005973D0 /* DI */,
-				03B05DA724CF5B5E005973D0 /* EarthquakeContract.swift */,
-				03B05DA924CF5B6D005973D0 /* EarthquakePresenter.swift */,
+				03B05DAE24CF5B7F005973D0 /* UI Models */,
+				03A2F40524D4344500C9F256 /* Screens */,
 				03B05D5924CD9DAA005973D0 /* SceneDelegate.swift */,
-				03B05D5B24CD9DAA005973D0 /* MasterViewController.swift */,
-				03A2F3FE24D3406C00C9F256 /* MasterViewController+ViewContract.swift */,
-				03B05D5D24CD9DAA005973D0 /* DetailViewController.swift */,
-				03B05D5F24CD9DAA005973D0 /* Main.storyboard */,
-				03B05D6224CD9DAB005973D0 /* Assets.xcassets */,
 				03B05D6424CD9DAB005973D0 /* LaunchScreen.storyboard */,
 			);
 			path = UI;
@@ -409,8 +428,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				03B05D6624CD9DAB005973D0 /* LaunchScreen.storyboard in Resources */,
+				03A2F40324D3598A00C9F256 /* DetailViewController.xib in Resources */,
 				03B05D6324CD9DAB005973D0 /* Assets.xcassets in Resources */,
-				03B05D6124CD9DAA005973D0 /* Main.storyboard in Resources */,
+				03A2F40124D3588400C9F256 /* MasterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,14 +556,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		03B05D5F24CD9DAA005973D0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				03B05D6024CD9DAA005973D0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		03B05D6424CD9DAB005973D0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

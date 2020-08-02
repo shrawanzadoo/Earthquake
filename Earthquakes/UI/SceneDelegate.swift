@@ -8,38 +8,69 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate, UISplitViewControllerDelegate {
-
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, UISplitViewControllerDelegate, MasterViewControllerDelegate {
+    
     var window: UIWindow?
-
+    
+    var masterVC: MasterViewController?
+    var detailVC: DetailViewController?
+    var splitViewController: UISplitViewController?
+    
     func scene(
         _ scene: UIScene,
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
     ) {
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.windowScene = windowScene
+        window?.makeKeyAndVisible()
+        
         guard let window = window else { return }
-        guard let splitViewController = window.rootViewController as? UISplitViewController else { return }
-        guard let navigationController = splitViewController.viewControllers.last as? UINavigationController else { return }
-        navigationController.topViewController?.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
-        navigationController.topViewController?.navigationItem.leftItemsSupplementBackButton = true
-        splitViewController.delegate = self
+        splitViewController = UISplitViewController()
+        
+        
+        masterVC = EarthquakeInjection().resolve()
+        detailVC = EarthquakeInjection().resolve()
+        
+        if let splitViewController = splitViewController,
+            let masterVC = masterVC,
+            let detailVC = detailVC {
+            splitViewController.delegate = self
+            splitViewController.preferredDisplayMode = .automatic
+            
+            detailVC.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
+            detailVC.navigationItem.leftItemsSupplementBackButton = true
+            
+            let masterNavController = UINavigationController(rootViewController: masterVC)
+            let detailNavController = UINavigationController(rootViewController: detailVC)
+            splitViewController.viewControllers = [masterNavController, detailNavController]
+            
+            masterVC.delegate = self
+        }
+        window.rootViewController = splitViewController
     }
-
+    
+    func earthquakeSelected(_ earthquake: Earthquake) {
+        if let detailVC = detailVC {
+            detailVC.detailItem = earthquake
+            splitViewController?.showDetailViewController(UINavigationController(rootViewController: detailVC), sender: masterVC)
+        }
+    }
+    
+    func earthquakeLoaded(_ earthquake: Earthquake) {
+        detailVC?.detailItem = earthquake
+    }
+    
     // MARK: - Split view
-
+    
     func splitViewController(
         _ splitViewController: UISplitViewController,
         collapseSecondary secondaryViewController: UIViewController,
         onto primaryViewController: UIViewController
     ) -> Bool {
-        guard let secondaryAsNavController = secondaryViewController as? UINavigationController else { return false }
-        guard let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController else { return false }
-        if topAsDetailController.detailItem == nil {
-            // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
-            return true
-        }
-        return false
+        return true
     }
-
+    
 }
 

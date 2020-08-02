@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
     func configureView() {
         if let detail = detailItem {
             if let label = detailDescriptionLabel {
+                navigationItem.title = "Earthquake \(detail.depth)"
                 label.text = "\(detail.magnitude)"
             }
         }
@@ -23,6 +24,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
+        navigationItem.title = "Earthquake details"
     }
 
     var detailItem: Earthquake? {
@@ -30,7 +32,5 @@ class DetailViewController: UIViewController {
             configureView()
         }
     }
-
-
 }
 
