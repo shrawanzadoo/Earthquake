@@ -5,6 +5,8 @@ struct Earthquake {
     let lat, lng: Double
     let magnitude, depth: Double
     let intensity: Intensity
+    let source: String
+    let id: String
 }
 
 enum Intensity {

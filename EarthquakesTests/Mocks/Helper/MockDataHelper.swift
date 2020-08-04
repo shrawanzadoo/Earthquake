@@ -20,7 +20,15 @@ class MockDataHelper {
         _ timeInterval: TimeInterval = 1343905536,
         _ magnitude: Double = 5
     ) -> EarthquakeInfo {
-        EarthquakeInfo(datetime: Date(timeIntervalSince1970: timeInterval), lat: 2.0, lng: 1.0, magnitude: magnitude, depth: 5)
+        EarthquakeInfo(
+            datetime: Date(timeIntervalSince1970: timeInterval),
+            lat: 2.0,
+            lng: 1.0,
+            magnitude: magnitude,
+            depth: 5,
+            src: "us",
+            id: "c0001xgp"
+        )
     }
     
     private static func readFromFile<T: Codable>(_ fileName: String) -> T? {

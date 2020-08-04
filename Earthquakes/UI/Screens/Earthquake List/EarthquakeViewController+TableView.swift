@@ -10,14 +10,8 @@ extension EarthquakeViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell : UITableViewCell!
-        cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
-        if cell == nil {
-            cell = getDefaultTableCell()
-        }
-        cell.textLabel?.text = "Magnitude : \(earthquakes[indexPath.row].magnitude)"
-        cell.detailTextLabel?.text = "Intensity : \(earthquakes[indexPath.row].intensity)"
-        cell.backgroundColor = earthquakes[indexPath.row].intensity.getColor()
+        let cell = getTableCell()
+        cell.configureCellWith(model: earthquakes[indexPath.row])
         return cell
     }
     
@@ -25,14 +19,11 @@ extension EarthquakeViewController {
         delegate?.earthquakeSelected(earthquakes[indexPath.row])
     }
     
-    func getDefaultTableCell() -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
-        let view = UIView(frame: .zero)
-        view.backgroundColor = .lightGray
-        cell.selectedBackgroundView = view
-        cell.textLabel?.textColor = .white
-        cell.detailTextLabel?.textColor = .white
-        
+    func getTableCell() -> EarthquakeCell {
+        let cellIdentifier = EarthquakeCell.reuseIdentifier
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: EarthquakeCell.reuseIdentifier) as? EarthquakeCell else {
+            fatalError("Could not dequeue EarthquakeCell with identifier \(cellIdentifier)")
+        }
         return cell
     }
 }

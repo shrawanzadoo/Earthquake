@@ -48,7 +48,9 @@ class EarthquakesPresenter: EarthquakesPresenterContract {
                             lng: $0.lng,
                             magnitude: $0.magnitude,
                             depth: $0.depth,
-                            intensity: $0.magnitude >= 8 ? .high : .low
+                            intensity: $0.magnitude >= 8 ? .high : .low,
+                            source: $0.src,
+                            id: $0.id
                         )
                     }
                     return .success(uiEarthquakes)

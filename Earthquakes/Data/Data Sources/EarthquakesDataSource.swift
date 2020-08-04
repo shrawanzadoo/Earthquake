@@ -39,7 +39,9 @@ class EarthquakesDataSourceRemote: EarthquakesDataSource {
                                 lat: earthquakeRemote.lat,
                                 lng: earthquakeRemote.lng,
                                 magnitude: earthquakeRemote.magnitude,
-                                depth: earthquakeRemote.depth
+                                depth: earthquakeRemote.depth,
+                                src: earthquakeRemote.src,
+                                id: earthquakeRemote.eqid
                             )
                         )
                     }

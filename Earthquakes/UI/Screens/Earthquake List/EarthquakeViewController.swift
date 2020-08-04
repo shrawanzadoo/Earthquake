@@ -7,7 +7,6 @@ protocol EarthquakeViewControllerDelegate {
 
 class EarthquakeViewController: UITableViewController {
     
-    let cellIdentifier = "EarthquakeCells"
     var earthquakes = [Earthquake]()
     
     var delegate: EarthquakeViewControllerDelegate?
@@ -32,6 +31,8 @@ class EarthquakeViewController: UITableViewController {
             tableView.addSubview(refreshControl)
             refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
         }
+        
+        tableView.registerTableViewCellNib(EarthquakeCell.self)
         
         self.presenter.takeView(self)
     }
