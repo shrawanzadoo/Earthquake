@@ -12,8 +12,7 @@ App displaying a Master Detail view to display Earthquake data.
 
 ##
 
-App fetches data from the following API:
-- http://api.geonames.org/earthquakesJSON
+- App fetches data from the following API: http://api.geonames.org/earthquakesJSON
 - The app displays a SplitviewController with the the list of Earthquakes as the master view and the mapview shown in the details view
 -  App supports orientation support. On iPad, iPhone 6 Plus, iPhone 7 Plus and iPhone 8 Plus using landscape mode will display both master and detail view.
 - Table view can be refreshed using the pull-to-refresh action
