@@ -4,7 +4,7 @@ extension MKMapView {
   func centerToLocation(
     _ lat: Double,
     _ lng: Double,
-    regionRadius: CLLocationDistance = 500000
+    regionRadius: CLLocationDistance = 1000000
   ) {
     let location = CLLocation(latitude: lat, longitude: lng)
     let coordinateRegion = MKCoordinateRegion(

@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UISplitViewControllerDe
             let masterVC = masterVC,
             let detailVC = detailVC {
             splitViewController.delegate = self
-            splitViewController.preferredDisplayMode = .automatic
+            splitViewController.preferredDisplayMode = .allVisible
             
             detailVC.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
             detailVC.navigationItem.leftItemsSupplementBackButton = true
@@ -45,7 +45,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UISplitViewControllerDe
     func earthquakeSelected(_ earthquake: Earthquake) {
         if let detailVC = detailVC {
             detailVC.detailItem = earthquake
-            splitViewController?.showDetailViewController(UINavigationController(rootViewController: detailVC), sender: masterVC)
+            splitViewController?.showDetailViewController(
+                UINavigationController(rootViewController: detailVC),
+                sender: masterVC
+            )
         }
     }
     
